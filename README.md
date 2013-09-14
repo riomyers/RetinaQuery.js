@@ -17,6 +17,7 @@ Make sure to include the script in the header or footer of your document
 //To enable the plugin add it to the header or footer of your documents 
 //(wherever you keep your scripts)
 //Include jQuery of course
+/*
 <script src="yourfolder/jquery.js"></script>
 //Include the retina Query script
 <script src="yourfolder/retina-query.js"><script/>
@@ -31,3 +32,4 @@ $('.noretina').retinaQuery({nope: true});
 $('.forceretina').retinaQuery({force: true})
 </script>
 
+*/
