@@ -18,18 +18,18 @@ Make sure to include the script in the header or footer of your document
 //(wherever you keep your scripts)
 //Include jQuery of course
 /*
-<script src="yourfolder/jquery.js"></script>
+ <script src="yourfolder/jquery.js"></script>
 //Include the retina Query script
-<script src="yourfolder/retina-query.js"><script/>
+ <script src="yourfolder/retina-query.js"><script/>
 //Apply retina query to all elements in the body, a.k.a everything
-<script>
-$('body').retinaQuery();
+ <script>
+ $('body').retinaQuery();
  
 //Disable retina on specific elements, of course you can change the class to anything you like
-$('.noretina').retinaQuery({nope: true});
+ $('.noretina').retinaQuery({nope: true});
  
 //Force retina on specific elements, of course you can change the class to anything you like
-$('.forceretina').retinaQuery({force: true})
-</script>
+ $('.forceretina').retinaQuery({force: true})
+ </script>
 
 */
