@@ -1,7 +1,7 @@
 RetinaQuery.js
 ==============
 
-A tiny and easy to use plugin that swaps out the images by chaging the src if you're website is viewed from a Retina Device.
+A tiny and easy to use plugin that swaps out the images by changing the src if you're website is viewed from a Retina Device.
 
 What is it?
 A tiny and handy little plugin that swaps out the images by changing the source if you're on a Retina Device.
