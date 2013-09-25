@@ -70,10 +70,10 @@ $('.forceretina').retinaQuery({force: true})
 
 		$('img').each(function() {
 		
-			var noExt = $(this).attr('src').lastIndexOf("http://", 0) !== 0;
+		    var noExt = $(this).attr('src').lastIndexOf("http://", 0) !== 0;
 		
 		    var Width = $(this).width();
-			var Height = $(this).height();
+		    var Height = $(this).height();
 	
 		//Force Retina
 		if(settings.force) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}};
