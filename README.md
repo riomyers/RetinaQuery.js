@@ -26,7 +26,7 @@ Make sure to include the script in the header or footer of your document
 <script src="yourfolder/jquery.js"></script>
 
 //Include the retina Query script
-<script src="yourfolder/retina-query.js"><script/>
+<script src="yourfolder/retina-query.js"></script>
 
 //Apply retina query to all elements in the body, a.k.a everything
 <script>
