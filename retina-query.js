@@ -1,7 +1,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2013 Rio Myers
+Copyright (c) 2017 Rio Myers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -44,48 +44,48 @@ $('.forceretina').retinaQuery({force: true})
 ;(function ($, window, document, undefined) {
 
     $.fn.retinaQuery = function(options) {
-    
+
     var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
-    var isRetina = pixelRatio > 1;    
+    var isRetina = pixelRatio > 1;
 	var retinaQueries = "(-webkit-min-device-pixel-ratio: 1.5),\
 	(min--moz-device-pixel-ratio: 1.5),\
 	(-o-min-device-pixel-ratio: 3/2),\
 	(min-device-pixel-ratio: 1.5),\
 	(min-resolution: 1.5dppx),\
-	(min-resolution: 144dpi)";    
-    var isRetinaQuery = window.matchMedia(retinaQueries).matches;           
-    
+	(min-resolution: 144dpi)";
+    var isRetinaQuery = window.matchMedia(retinaQueries).matches;
+
       var defaults = {
-          force : false,          
+          force : false,
           nope  : false,
           on    : true
-      }    
-      
-     var settings = $.extend(defaults, options);         
+      }
+
+     var settings = $.extend(defaults, options);
 
        return this.each( function() {
-       
+
        //Window load necessary to get width and height for Safari
        $(window).load(function() {
 
 		$('img').each(function() {
-		
-		    var noExt = $(this).attr('src').lastIndexOf("http://", 0) !== 0;
-		
+			//Change to http if you dont' use ssl
+		    var noExt = $(this).attr('src').lastIndexOf("https://", 0) !== 0;
+
 		    var Width = $(this).width();
 		    var Height = $(this).height();
-	
+
 		//Force Retina
 		if(settings.force) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}};
-    
+
 		//Run Retina
 		if(settings.on) {if (isRetina || isRetinaQuery) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}}};
-    
+
 		//No Retina
-		if(settings.nope) {if (noExt) {$(this).attr('src', $(this).attr('src').replace("@2x.","."))}}; 
-      
+		if(settings.nope) {if (noExt) {$(this).attr('src', $(this).attr('src').replace("@2x.","."))}};
+
     		$(this).attr({ width: Width, height: Height});
-    		    
+
 			$(this).error(function(){
     			$(this).attr('src', $(this).attr('src').replace("@2x.","."))
 			});
