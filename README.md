@@ -13,7 +13,7 @@ retina version: "retinaimage@2x.png"
 
 If a Retina device is detected, this script will automatically change your images to retina versions if they exist. 
 The width and height of the original image is automatically added to the HTML of the retina version so there is no need to do this manually.
-Use <a href="http://retinize.it/" target="_blank">Retinize It</a> for a photoshop shortcut to create retina versions of your images.
+Use [Retinize It](http://retinize.it/){:target="_blank"} for a photoshop shortcut to create retina versions of your images.
 If the @2x retina image version does not exist the original non-retina image will be shown instead.
 Make sure to include the script in the header or footer of your document
 
