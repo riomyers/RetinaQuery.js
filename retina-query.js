@@ -69,20 +69,20 @@ $('.forceretina').retinaQuery({force: true})
        $(window).load(function() {
 
 		$('img').each(function() {
-			//Change to http if you dont' use ssl
+		    //Change to http if you dont' use ssl
 		    var noExt = $(this).attr('src').lastIndexOf("https://", 0) !== 0;
-
+	
 		    var Width = $(this).width();
 		    var Height = $(this).height();
-
-		//Force Retina
-		if(settings.force) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}};
-
-		//Run Retina
-		if(settings.on) {if (isRetina || isRetinaQuery) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}}};
-
-		//No Retina
-		if(settings.nope) {if (noExt) {$(this).attr('src', $(this).attr('src').replace("@2x.","."))}};
+	
+			//Force Retina
+			if(settings.force) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}};
+	
+			//Run Retina
+			if(settings.on) {if (isRetina || isRetinaQuery) {if (noExt) {$(this).attr('src', $(this).attr('src').replace(".","@2x."))}}};
+	
+			//No Retina
+			if(settings.nope) {if (noExt) {$(this).attr('src', $(this).attr('src').replace("@2x.","."))}};
 
     		$(this).attr({ width: Width, height: Height});
 
